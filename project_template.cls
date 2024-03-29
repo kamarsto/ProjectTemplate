@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ProjectTemplate/project_template}[Template for projects]
 
-\LoadClass[a4paper, 12pt]{report}
+\LoadClass[a4paper, 12pt]{article}
 
 \newcommand{\ProjectLanguage}[1]{\gdef\@ProjectLanguage{#1}}
 \newcommand{\BabelProjectLanguage}[1]{\gdef\@BabelProjectLanguage{#1}}
