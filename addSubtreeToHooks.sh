@@ -1,30 +1,30 @@
 #!/bin/sh
 CURRENT_DIR=$(git rev-parse --show-prefix)
-if [ -d ../latextemplate ]
+if [ -d ../ProjectTemplate ]
 then
-    echo "Error: cannot add to subtree from inside the latextemplate folder. Please move addSubtreeToHooks.sh to the directory above and run it from there"
+    echo "Error: cannot add to subtree from inside the ProjectTemplate folder. Please move addSubtreeToHooks.sh to the directory above and run it from there"
     read -p "Press Enter to continue" </dev/tty
     exit 1
 fi
 
-rm -rf latextemplate
+rm -rf ProjectTemplate
 
 while [ ! -d .git ]
 do
 	cd ..
 done
 
-git subtree add --prefix "${CURRENT_DIR}latextemplate" https://gitlab.com/sekcja-rakietowa-ska/latextemplate master --squash
+git subtree add --prefix "${CURRENT_DIR}ProjectTemplate" https://github.com/kamarsto/ProjectTemplate.git main --squash
 
-if [ ! -f UpdateLatexTemplate.sh ]
+if [ ! -f UpdateProjectTemplate.sh ]
 then
 # 	mkdir .githooks
-	touch UpdateLatexTemplate.sh
-	echo "#!/bin/bash" >> UpdateLatexTemplate.sh
-	echo "echo \"Updating LaTeX template\"" >> UpdateLatexTemplate.sh
-	git add UpdateLatexTemplate.sh
-	git commit --no-verify -m "[SYS] Added the missing UpdateLatexTemplate.sh script"
+	touch UpdateProjectTemplate.sh
+	echo "#!/bin/bash" >> UpdateProjectTemplate.sh
+	echo "echo \"Updating LaTeX template\"" >> UpdateProjectTemplate.sh
+	git add UpdateProjectTemplate.sh
+	git commit --no-verify -m "[SYS] Added the missing UpdateProjectTemplate.sh script"
 fi
-echo "git subtree pull --prefix \"${CURRENT_DIR}latextemplate\" \"https://gitlab.com/sekcja-rakietowa-ska/latextemplate\" master --squash" >> UpdateLatexTemplate.sh
-git add UpdateLatexTemplate.sh
-git commit --no-verify -m "[SYS] Added latextemplate to ${CURRENT_DIR}latextemplate"
+echo "git subtree pull --prefix \"${CURRENT_DIR}ProjectTemplate\" \"https://github.com/kamarsto/ProjectTemplate.git\" main --squash" >> UpdateProjectTemplate.sh
+git add UpdateProjectTemplate.sh
+git commit --no-verify -m "[SYS] Added ProjectTemplate to ${CURRENT_DIR}ProjectTemplate"
