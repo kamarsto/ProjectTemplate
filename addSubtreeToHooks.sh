@@ -14,7 +14,7 @@ do
 	cd ..
 done
 
-git subtree add --prefix "${CURRENT_DIR}ProjectTemplate" https://github.com/kamarsto/ProjectTemplate.git main --squash
+git subtree add --prefix "${CURRENT_DIR}ProjectTemplate" https://github.com/kamarsto/ProjectTemplate main --squash
 
 if [ ! -f UpdateProjectTemplate.sh ]
 then
@@ -25,6 +25,6 @@ then
 	git add UpdateProjectTemplate.sh
 	git commit --no-verify -m "[SYS] Added the missing UpdateProjectTemplate.sh script"
 fi
-echo "git subtree pull --prefix \"${CURRENT_DIR}ProjectTemplate\" \"https://github.com/kamarsto/ProjectTemplate.git\" main --squash" >> UpdateProjectTemplate.sh
+echo "git subtree pull --prefix \"${CURRENT_DIR}ProjectTemplate\" \"https://github.com/kamarsto/ProjectTemplate\" main --squash" >> UpdateProjectTemplate.sh
 git add UpdateProjectTemplate.sh
 git commit --no-verify -m "[SYS] Added ProjectTemplate to ${CURRENT_DIR}ProjectTemplate"
