@@ -29,7 +29,7 @@
 \RequirePackage{caption}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{csquotes} %Ensures compatibility of Biblatex when using Babel
-\RequirePackage[ddmmyyyy]{datetime}
+\RequirePackage[yyyymmdd]{datetime}
 \RequirePackage{etoolbox}
 \RequirePackage[margin=75pt]{geometry} %Set margins
 \RequirePackage{fancyhdr}
@@ -51,8 +51,29 @@
 \RequirePackage[most]{tcolorbox} %Code in boxes for function documentation
 \RequirePackage{textcomp} %A workaround to get rid of a gensymb warning
 \RequirePackage{verbatim}
+\RequirePackage[backend=biber, sorting=none]{biblatex}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\RequirePackage{cases}
+\RequirePackage{aligned-overset}
+\RequirePackage{esint}
+\RequirePackage{bbold}
+\RequirePackage{tablefootnote}
+\RequirePackage{makecell}
+\RequirePackage{xfrac}
+\RequirePackage{tikz}
 %\RequirePackage{minted} %While a very nice tool, it should NOT be included due to the difficulty in installing it
 %\RequirePackage{pageslts}%handling different page numbering
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 %% Settings options %%
@@ -225,3 +246,24 @@
 \clearpage
 \pagenumbering{arabic}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Macros and Math operators %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\tn{\textnormal}
+
+\DeclareMathOperator{\dive}{div}
+\DeclareMathOperator{\Rey}{Re}
+\DeclareMathOperator{\Ma}{Ma}
+\DeclareMathOperator{\Kn}{Kn}
+\DeclareMathOperator{\mug}{\mathrm{\mu}g}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography settings     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\postnotedelim}{}
