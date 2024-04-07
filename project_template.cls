@@ -62,7 +62,8 @@
 \RequirePackage{makecell}
 \RequirePackage{xfrac}
 \RequirePackage{tikz}
-\RequirePackage[noabbrev]{cleveref}
+\RequirePackage{pdfpages}
+\RequirePackage{cleveref}
 %\RequirePackage{minted} %While a very nice tool, it should NOT be included due to the difficulty in installing it
 %\RequirePackage{pageslts}%handling different page numbering
 
