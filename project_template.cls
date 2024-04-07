@@ -260,6 +260,8 @@
 \DeclareMathOperator{\Kn}{Kn}
 \DeclareMathOperator{\mug}{\mathrm{\mu}g}
 
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
