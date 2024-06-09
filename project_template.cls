@@ -37,7 +37,7 @@
 \RequirePackage[export]{adjustbox}
 \RequirePackage{amsfonts}
 \RequirePackage[intlimits]{amsmath} %Various maths utilities - more symbols
-\RequirePackage{amssymb} %This conflicts with the polish babel package (\lll)
+% \RequirePackage{amssymb} %This conflicts with the polish babel package (\lll)
 \RequirePackage[\@BabelProjectLanguage]{babel}%This is included because oftentimes author names might have Polish symbols
 \RequirePackage{booktabs}
 \RequirePackage{caption}
