@@ -20,6 +20,20 @@
 %% Provide packages %%
 %%%%%%%%%%%%%%%%%%%%%%
 \PassOptionsToPackage{table, svgnames}{xcolor}
+\RequirePackage{iftex}
+
+\ifpdftex
+    \RequirePackage[utf8]{inputenc}                   
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage[fulloldstylenums,largesmallcaps]{kpfonts}
+\else
+  \RequirePackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX} 
+\fi
+
+
+
+
 \RequirePackage[export]{adjustbox}
 \RequirePackage{amsfonts}
 \RequirePackage[intlimits]{amsmath} %Various maths utilities - more symbols
@@ -27,14 +41,12 @@
 \RequirePackage[\@BabelProjectLanguage]{babel}%This is included because oftentimes author names might have Polish symbols
 \RequirePackage{booktabs}
 \RequirePackage{caption}
-\RequirePackage[utf8]{inputenc}
 \RequirePackage{csquotes} %Ensures compatibility of Biblatex when using Babel
 \RequirePackage[yyyymmdd]{datetime}
 \RequirePackage{etoolbox}
 \RequirePackage[margin=75pt]{geometry} %Set margins
 \RequirePackage{fancyhdr}
 \RequirePackage{float}
-\RequirePackage[T1]{fontenc}
 \RequirePackage{gensymb} %\degree, \celsius etc
 \RequirePackage{graphicx}
 \RequirePackage[hidelinks]{hyperref} %Links
